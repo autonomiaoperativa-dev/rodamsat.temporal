@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es-MX" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tienda RODAMSAT | Equipo de redes, videovigilancia, energía y control de acceso</title>
+<meta name="description" content="Compra equipo profesional de redes, enlaces inalámbricos, videovigilancia, control de acceso, energía solar y telefonía IP. Producto original con asesoría e instalación de RODAMSAT.">
+<meta name="theme-color" content="#0d1015">
+<link rel="icon" type="image/png" href="assets/marca/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://ftp3.syscom.mx">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<script src="assets/icons.js"></script>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-list">
+      <a href="tel:+524448206058"><svg><use href="#i-phone"/></svg>(444) 820 6058</a>
+      <a href="mailto:info@rodamsat.com.mx" class="hide-sm"><svg><use href="#i-mail"/></svg>info@rodamsat.com.mx</a>
+      <span class="hide-sm"><svg><use href="#i-truck"/></svg>Envío a todo México</span>
+    </div>
+    <div class="topbar-list">
+      <span class="hide-sm"><svg><use href="#i-receipt"/></svg>Factura CFDI</span>
+      <a data-wa="Hola RODAMSAT, tengo una duda sobre un producto de la tienda."><svg><use href="#i-whatsapp"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="RODAMSAT, inicio">
+      <img class="logo-img" src="assets/marca/logo-rodamsat.png" alt="rodamSAT" width="211" height="175"><span class="logo-text"><small>Informática y<br>Telecomunicaciones</small></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#soluciones">Soluciones</a>
+      <a href="index.html#industrias">Industrias</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="tienda.html" class="active" aria-current="page">Tienda</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" type="button" data-open-cart aria-label="Ver mi cotización"><svg><use href="#i-cart"/></svg><span class="cart-count" data-n="0">0</span></button>
+      <button class="btn btn-primary btn-sm btn-quote" type="button" data-open-cart>Mi cotización</button>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="store-hero">
+  <div class="container">
+    <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Tienda</span></nav>
+    <h1>Tienda RODAMSAT</h1>
+    <p>Equipo profesional de las marcas que nosotros mismos instalamos. Arma tu lista y recibe precio, existencia y tiempo de entrega.</p>
+    <form class="search" id="search-form" role="search">
+      <input id="q" type="search" placeholder="Busca por producto, marca o modelo (ej. LiteBeam, Hikvision, RUT956)" aria-label="Buscar productos" autocomplete="off">
+      <button class="btn btn-primary" type="submit"><svg><use href="#i-search"/></svg><span>Buscar</span></button>
+    </form>
+    <div class="perks">
+      <span><svg><use href="#i-check"/></svg>Producto original con garantía de fábrica</span>
+      <span><svg><use href="#i-check"/></svg>Asesoría de ingenieros que instalan</span>
+      <span><svg><use href="#i-check"/></svg>Instalación opcional en sitio</span>
+    </div>
+  </div>
+</section>
+
+<div class="dept-tabs"><div class="container" id="dept-tabs" role="tablist" aria-label="Departamentos"></div></div>
+
+<div class="container store">
+  <aside class="filters" id="filters" aria-label="Filtros">
+    <div class="filter-group">
+      <h4>Marca</h4>
+      <div class="brand-list" id="brand-list"></div>
+    </div>
+    <div class="help-box">
+      <b>¿No encuentras un equipo?</b>
+      <p>Manejamos el catálogo completo de Syscom: más de 75,000 productos. Pídenos el modelo que necesitas.</p>
+      <a class="btn btn-primary btn-sm btn-block" data-wa="Hola RODAMSAT, busco un equipo que no veo en la tienda:"><svg><use href="#i-whatsapp"/></svg> Preguntar</a>
+    </div>
+  </aside>
+
+  <section aria-live="polite">
+    <div class="results-bar">
+      <div><h2 id="results-title">Todos los productos</h2><p id="results-count"></p></div>
+      <div class="results-tools">
+        <button class="btn btn-outline btn-sm filters-toggle" type="button" id="filters-toggle"><svg><use href="#i-filter"/></svg> Filtros</button>
+        <label class="sr-only" for="sort">Ordenar</label>
+        <select class="select" id="sort">
+          <option value="rel">Más vendidos</option>
+          <option value="marca">Marca A–Z</option>
+          <option value="modelo">Modelo A–Z</option>
+        </select>
+      </div>
+    </div>
+    <div class="active-chips" id="active-chips"></div>
+    <div class="products" id="grid"></div>
+    <div style="text-align:center;margin-top:32px"><button class="btn btn-outline" type="button" id="more" hidden>Ver más productos</button></div>
+  </section>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img class="logo-img" src="assets/marca/logo-rodamsat.png" alt="rodamSAT" width="211" height="175"><span class="logo-text"><small>Informática y<br>Telecomunicaciones</small></span></a>
+        <p class="about-f">Conectividad, seguridad y energía para empresas, industria y gobierno. San Luis Potosí, desde 1998.</p>
+      </div>
+      <div><h4>Tienda</h4><ul id="footer-depts"></ul></div>
+      <div><h4>Empresa</h4><ul><li><a href="index.html#nosotros">Nosotros</a></li><li><a href="index.html#proyectos">Proyectos</a></li><li><a href="index.html#soluciones">Soluciones</a></li><li><a href="index.html#contacto">Contacto</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="tel:+524448206058">(444) 820 6058</a></li><li><a href="mailto:info@rodamsat.com.mx">info@rodamsat.com.mx</a></li><li>Av. Himno Nacional 3705-A<br>San Luis Potosí, S.L.P.</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> RODAMSAT Informática y Telecomunicaciones S.A. de C.V.</span>
+      <span><a href="#">Aviso de privacidad</a> · <a href="#">Envíos y devoluciones</a> · <a href="#">Garantías</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa aria-label="Escríbenos por WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+
+<div class="overlay"></div>
+
+<!-- Ficha de producto -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="modal-card">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Cerrar"><svg><use href="#i-close"/></svg></button>
+    <div class="modal-img"><img id="m-img" alt=""></div>
+    <div class="modal-info">
+      <span class="product-brand" id="m-brand"></span>
+      <h3 id="m-title"></h3>
+      <dl class="specs" id="m-specs"></dl>
+      <div class="price-box"><b>Precio por cotización</b>Te confirmamos precio en MXN con IVA, existencia y tiempo de entrega el mismo día hábil.</div>
+      <div class="modal-actions">
+        <div class="qty"><button type="button" id="m-minus" aria-label="Menos">−</button><input id="m-qty" type="number" min="1" max="999" value="1" aria-label="Cantidad"><button type="button" id="m-plus" aria-label="Más">+</button></div>
+        <button class="btn btn-primary" type="button" id="m-add"><svg><use href="#i-plus"/></svg> Agregar a cotización</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lista de cotización -->
+<aside class="drawer" aria-hidden="true" aria-label="Mi cotización">
+  <div class="drawer-head"><div><h3>Mi cotización</h3><p>Aún no agregas productos</p></div><button class="icon-btn" type="button" data-close aria-label="Cerrar"><svg><use href="#i-close"/></svg></button></div>
+  <div class="drawer-body"></div>
+  <form class="drawer-foot" id="quote-form" novalidate>
+    <div class="fields">
+      <div class="field"><input name="nombre" placeholder="Nombre *" required aria-label="Nombre"></div>
+      <div class="field"><input name="empresa" placeholder="Empresa" aria-label="Empresa"></div>
+      <div class="field"><input name="correo" type="email" placeholder="Correo *" required aria-label="Correo"></div>
+      <div class="field"><input name="telefono" type="tel" placeholder="Teléfono" aria-label="Teléfono"></div>
+      <div class="field full"><input name="cp" placeholder="Código postal de entrega" aria-label="Código postal de entrega"></div>
+    </div>
+    <p class="note">Te enviamos precio, existencia y tiempo de entrega. Precios en MXN con IVA y factura CFDI.</p>
+    <div class="form-actions">
+      <button class="btn btn-primary" type="button" data-send="wa"><svg><use href="#i-whatsapp"/></svg> Enviar por WhatsApp</button>
+      <button class="btn btn-outline" type="button" data-send="mail"><svg><use href="#i-mail"/></svg> Por correo</button>
+    </div>
+  </form>
+</aside>
+
+<script src="assets/catalogo.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/store.js"></script>
+</body>
+</html>
