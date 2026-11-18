@@ -1,7 +1,7 @@
 /* RODAMSAT — lógica común: menú, animaciones, lista de cotización, formularios. */
 var RODAMSAT = {
-  // POR CONFIRMAR con RODAMSAT: número de WhatsApp (formato internacional sin "+").
-  whatsapp: "524448206058",
+  // WhatsApp de la carta de presentación 2023 de RODAMSAT (formato internacional sin "+").
+  whatsapp: "524448296260",
   email: "info@rodamsat.com.mx",
   telefono: "(444) 820 6058"
 };
